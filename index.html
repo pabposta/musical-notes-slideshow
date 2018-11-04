@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play my notes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body ng-app="Notes" ng-controller="NotesCtrl as ctrl">
+    <form>
+        <label for="tempo-input">Tempo</label>
+        <input type="number" id="tempo-input" min="1" max="240" ng-model="ctrl.tempo"/>
+        <label for="metronome">Metronome sound</label>
+        <input type="checkbox" id="metronome" ng-model="ctrl.isMetronomeOn"/>
+        <label for="click">Click sound</label>
+        <input type="checkbox" id="click" ng-model="ctrl.isClickOn"/>
+    </form>
+    <div class="note">{{ ctrl.note }}</div>
+</body>
+</html>
